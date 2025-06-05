@@ -54,4 +54,4 @@ def print_timing_info():
 
 
 # this will print all the timer values upon termination of any program that imported this file
-atexit.register(print_timing_info)
+# atexit.register(print_timing_info)

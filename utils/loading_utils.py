@@ -3,7 +3,7 @@ from ..model.model import *
 
 
 def load_model(path_to_model):
-    print('Loading model {}...'.format(path_to_model))
+    # print('Loading model {}...'.format(path_to_model))
     raw_model = torch.load(path_to_model)
     arch = raw_model['arch']
 
@@ -26,6 +26,6 @@ def get_device(use_gpu):
         device = torch.device('cuda:0')
     else:
         device = torch.device('cpu')
-    print('Device:', device)
+    # print('Device:', device)
 
     return device

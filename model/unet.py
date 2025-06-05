@@ -26,10 +26,10 @@ class BaseUNet(nn.Module):
         self.norm = norm
 
         if use_upsample_conv:
-            print('Using UpsampleConvLayer (slow, but no checkerboard artefacts)')
+            # print('Using UpsampleConvLayer (slow, but no checkerboard artefacts)')
             self.UpsampleLayer = UpsampleConvLayer
         else:
-            print('Using TransposedConvLayer (fast, with checkerboard artefacts)')
+            # print('Using TransposedConvLayer (fast, with checkerboard artefacts)')
             self.UpsampleLayer = TransposedConvLayer
 
         self.num_encoders = num_encoders

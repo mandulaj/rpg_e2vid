@@ -62,12 +62,12 @@ class EventPreprocessor:
 
     def __init__(self, options):
 
-        print('== Event preprocessing ==')
+        # print('== Event preprocessing ==')
         self.no_normalize = options.no_normalize
-        if self.no_normalize:
-            print('!!Will not normalize event tensors!!')
-        else:
-            print('Will normalize event tensors.')
+        # if self.no_normalize:
+        #     print('!!Will not normalize event tensors!!')
+        # else:
+        #     print('Will normalize event tensors.')
 
         self.hot_pixel_locations = []
         if options.hot_pixels_file:
@@ -78,8 +78,8 @@ class EventPreprocessor:
                 print('WARNING: could not load hot pixels file: {}'.format(options.hot_pixels_file))
 
         self.flip = options.flip
-        if self.flip:
-            print('Will flip event tensors.')
+        # if self.flip:
+        #     print('Will flip event tensors.')
 
     def __call__(self, events):
 
