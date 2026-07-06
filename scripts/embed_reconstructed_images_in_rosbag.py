@@ -1,9 +1,19 @@
-import rosbag
+try:
+    import rosbag
+except ImportError:
+    pass
 import cv2
 import numpy as np
-from cv_bridge import CvBridge, CvBridgeError
+try:
+    from cv_bridge import CvBridge, CvBridgeError
+except ImportError:
+    CvBridge = None
+    CvBridgeError = Exception
 from os.path import join
-import rospy
+try:
+    import rospy
+except ImportError:
+    pass
 import argparse
 import shutil
 import os
@@ -86,5 +96,5 @@ if __name__ == "__main__":
                         outbag.write(args.image_topic, img_msg,
                                      img_msg.header.stamp)
 
-                    except CvBridgeError, e:
-                        print e
+                    except CvBridgeError as e:
+                        print(e)

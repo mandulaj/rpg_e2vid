@@ -1,11 +1,12 @@
 #!/usr/bin/python
 
 import argparse
-import rosbag
-import rospy
+try:
+    import rosbag
+except ImportError:
+    pass
 import os
 import zipfile
-import shutil
 import sys
 from os.path import basename
 
@@ -34,7 +35,7 @@ def query_yes_no(question, default="yes"):
 
     while True:
         sys.stdout.write(question + prompt)
-        choice = raw_input().lower()
+        choice = input().lower()
         if default is not None and choice == '':
             return valid[default]
         elif choice in valid:

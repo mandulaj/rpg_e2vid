@@ -1,7 +1,6 @@
 import torch
 import time
 import numpy as np
-import atexit
 
 cuda_timers = {}
 timers = {}

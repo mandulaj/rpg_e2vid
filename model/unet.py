@@ -1,8 +1,6 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as f
-from torch.nn import init
-from .submodules import ConvLayer, UpsampleConvLayer, TransposedConvLayer, RecurrentConvLayer, ResidualBlock, ConvLSTM, ConvGRU
+from .submodules import ConvLayer, UpsampleConvLayer, TransposedConvLayer, RecurrentConvLayer, ResidualBlock
 
 
 def skip_concat(x1, x2):

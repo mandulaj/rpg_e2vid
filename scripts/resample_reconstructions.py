@@ -1,8 +1,7 @@
 import numpy as np
-from matplotlib import pyplot as plt
 import argparse
 import glob
-from os.path import basename, join, exists
+from os.path import join, exists
 from os import makedirs
 import math
 import shutil

@@ -1,7 +1,5 @@
-from .util import robust_min, robust_max
 from .path_utils import ensure_dir
 from .timers import Timer, CudaTimer
-from .loading_utils import get_device
 from os.path import join
 from math import ceil, floor
 from torch.nn import ReflectionPad2d
@@ -12,7 +10,6 @@ from collections import deque
 import atexit
 import scipy.stats as st
 import torch.nn.functional as F
-from math import sqrt
 
 
 def make_event_preview(events, mode='red-blue', num_bins_to_show=-1):

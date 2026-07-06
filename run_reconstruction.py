@@ -1,14 +1,14 @@
 import torch
-from utils.loading_utils import load_model, get_device
+from .utils.loading_utils import load_model, get_device
 import numpy as np
 import argparse
 import pandas as pd
-from utils.event_readers import FixedSizeEventReader, FixedDurationEventReader
-from utils.inference_utils import events_to_voxel_grid, events_to_voxel_grid_pytorch
-from utils.timers import Timer
+from .utils.event_readers import FixedSizeEventReader, FixedDurationEventReader
+from .utils.inference_utils import events_to_voxel_grid, events_to_voxel_grid_pytorch
+from .utils.timers import Timer
 import time
-from image_reconstructor import ImageReconstructor
-from options.inference_options import set_inference_options
+from .image_reconstructor import ImageReconstructor
+from .options.inference_options import set_inference_options
 
 
 if __name__ == "__main__":

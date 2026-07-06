@@ -1,9 +1,5 @@
 from ..base import BaseModel
-import torch.nn as nn
-import torch
 from ..model.unet import UNet, UNetRecurrent
-from os.path import join
-from ..model.submodules import ConvLSTM, ResidualBlock, ConvLayer, UpsampleConvLayer, TransposedConvLayer
 
 
 class BaseE2VID(BaseModel):
